@@ -6,7 +6,7 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 
 /**
- * An endpoint class we are exposing
+ * An endpoint class for joke.
  */
 @Api(
         name = "myApi",
@@ -19,7 +19,7 @@ import com.google.api.server.spi.config.ApiNamespace;
 )
 public class MyEndpoint {
 
-    /** A simple endpoint method to provide a joke */
+    /** A simple endpoint method to provide a joke. */
     @ApiMethod(name = "getJoke")
     public MyBean getJoke(){
         MyBean response = new MyBean();
