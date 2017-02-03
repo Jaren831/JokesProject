@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 25
     buildToolsVersion "24.0.3"
-
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 21
@@ -18,23 +18,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     productFlavors {
         free {
             applicationId "com.udacity.gradle.builditbigger.free"
-            versionName "1.0-free"
-            buildConfigField("boolean", "PAID_VERSION", "false")
+            buildConfigField "boolean", "PAID_VERSION", "false"
         }
         paid {
             applicationId "com.udacity.gradle.builditbigger"
-            versionName "1.0-paid"
-            buildConfigField("boolean", "PAID_VERSION", "true")
+            buildConfigField "boolean", "PAID_VERSION", "true"
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'lib', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'lib')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

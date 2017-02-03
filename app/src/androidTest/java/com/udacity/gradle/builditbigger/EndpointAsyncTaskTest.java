@@ -1,22 +1,22 @@
 package com.udacity.gradle.builditbigger;
 
-import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.concurrent.TimeUnit;
 
-@RunWith(AndroidJUnit4.class)
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 public class EndpointAsyncTaskTest {
     @Test
     public void testDoInBackground() throws Exception{
         try {
             MainActivity mainActivity = new MainActivity();
-            EndpointAsyncTask endpointAsyncTask = new EndpointAsyncTask(mainActivity);
-            endpointAsyncTask.execute();
-            String result = endpointAsyncTask.get(30, TimeUnit.SECONDS);
+            EndPointsAsyncTask endpointsAsyncTask = new EndPointsAsyncTask(mainActivity);
+            endpointsAsyncTask.execute();
+            String result = endpointsAsyncTask.get(30, TimeUnit.SECONDS);
 
             assertNotNull(result);
             assertTrue(result.length() > 0);

@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class JokeProvider {
 
-    private final String[] jokes = {
+    private static final String[] jokes = {
             "This is totally a funny joke."
     };
-    public String getJoke(){
+    public static String getJoke(){
         int random = new Random().nextInt(jokes.length);
         return jokes[random];
     }
