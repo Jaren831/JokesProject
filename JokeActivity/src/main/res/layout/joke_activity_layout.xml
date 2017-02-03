@@ -5,7 +5,6 @@
     <TextView
         android:id="@+id/joke_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UHHHHHHHH"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
